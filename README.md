@@ -1,1 +1,1 @@
-# sync_chart
+# Synchronize chart
