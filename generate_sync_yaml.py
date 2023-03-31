@@ -1,4 +1,9 @@
+import os
 import yaml
+
+repo = os.environ.get('CHART_REPO')
+username = os.environ.get('USER')
+password = os.environ.get('PASS')
 
 with open('config.yaml', 'r') as stream:
     try:
@@ -7,7 +12,7 @@ with open('config.yaml', 'r') as stream:
         print(exc)
 
 for i, (chart, dependencies) in enumerate(config_data['charts'].items()):
-    filename = f"./{i+1}.yaml"
+    filename = f"./chart-{i+1}.yaml"
     data = {
         "source": {
             "repo": {
@@ -19,10 +24,10 @@ for i, (chart, dependencies) in enumerate(config_data['charts'].items()):
         "target": {
             "repo": {
                 "kind": "CHARTMUSEUM",
-                "url": "https://chart.paas.talkweb.com.cn",
+                "url": f"{repo}",
                 "auth": {
-                    "username": "username",
-                    "password": "password"
+                    "username": f"{username}",
+                    "password": f"{password}"
                 }
             }
         },
