@@ -34,6 +34,7 @@ jobs:
         PASS: ${{ secrets.CHART_PASSWORD }}
       run: |
         python generate_sync_yaml.py
+        ls -al
 
     - name: build image
       uses: docker/build-push-action@v2
