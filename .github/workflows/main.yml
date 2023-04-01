@@ -11,18 +11,14 @@ on:
 jobs:
   sync-chart:
     runs-on: ubuntu-20.04
-    strategy:
-      max-parallel: 4
-      matrix:
-        python-version: [3.7]
 
     steps:
     - uses: actions/checkout@v3
     
-    - name: Set up Python ${{ matrix.python-version }}
+    - name: Set up Python
       uses: actions/setup-python@v4
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: 3.10
         cache: 'pip' # caching pip dependencies
         
     - name: Install dependencies
