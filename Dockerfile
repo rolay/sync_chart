@@ -2,6 +2,9 @@ FROM gcr.io/bitnami-labs/charts-syncer as build
 
 FROM ubuntu:20.04
 
+ARG CHART_REPO
+ARG USER
+ARG PASS
 WORKDIR /
 COPY .  /
 COPY --from=build /charts-syncer /charts-syncer
