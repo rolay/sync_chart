@@ -6,7 +6,7 @@ WORKDIR /
 COPY .  /
 COPY --from=build /charts-syncer /charts-syncer
 RUN apt-get update && \
-    apt-get install python3 python3-pip && \
+    apt-get install -y python3 python3-pip && \
     python3 -m pip install --upgrade pip && \
     pip3 install -r requirements.txt && \
     python3 generate_sync_yaml.py
