@@ -40,14 +40,15 @@ jobs:
       uses: docker/build-push-action@v2
       with:
         tags: chart-sync:latest
+        build-args: |
+          CHART_REPO=${{ secrets.CHART_REPO }}
+          USER=${{ secrets.CHART_USERNAME }}
+          PASS=${{ secrets.CHART_PASSWORD }}
         push: false
         
     - name: chart sync
       uses: addnab/docker-run-action@v3
       with:
         image: chart-sync:latest
-        options: --add-host=chart.paas.talkweb.com.cn:116.205.232.249
         run: |
-          pwd
-          ls -al
           sh -x /entrypoint.sh
