@@ -1,6 +1,6 @@
 #!/bin/bash
 
-for file in chart-*.yaml; do
+for file in $(ls chart-*.yaml); do
     echo "[chart sync] $file sync start"
     /charts-syncer sync --config $file -v 4 --latest-version-only
     echo "[chart sync] $file sync done"
