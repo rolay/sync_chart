@@ -2,6 +2,7 @@
 charts:
   charts.longhorn.io:
     - longhorn
-    - test
   kubernetes-sigs.github.io/nfs-subdir-external-provisioner:
     - nfs-subdir-external-provisioner
+  wutong-paas.github.io/helm-charts:
+
