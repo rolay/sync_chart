@@ -47,4 +47,5 @@ jobs:
       with:
         image: chart-sync:latest
         options: --add-host=chart.paas.talkweb.com.cn:116.205.232.249
-        run: echo "hello world"        
+        run: |
+          sh /entrypoint.sh
