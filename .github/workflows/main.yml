@@ -48,4 +48,6 @@ jobs:
         image: chart-sync:latest
         options: --add-host=chart.paas.talkweb.com.cn:116.205.232.249
         run: |
+          pwd
+          ls -al
           sh -x /entrypoint.sh
