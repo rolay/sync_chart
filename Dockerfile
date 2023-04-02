@@ -1,6 +1,6 @@
 FROM gcr.io/bitnami-labs/charts-syncer as build
 
-FROM ubuntu:20.04
+FROM ubuntu:latest
 
 ARG CHART_REPO
 ARG USER
