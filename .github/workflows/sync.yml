@@ -29,4 +29,4 @@ jobs:
       with:
         image: chart-sync:latest
         run: |
-          sh -x /entrypoint.sh
+          sh /entrypoint.sh
