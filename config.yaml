@@ -7,5 +7,3 @@ charts:
   wutong-paas.github.io/helm-charts:
   prometheus-community.github.io/helm-charts:
     - kube-prometheus-stack
-  charts.bitnami.com/bitnami:
-    - sonarqube
