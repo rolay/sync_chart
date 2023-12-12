@@ -6,5 +6,5 @@ charts:
     - nfs-subdir-external-provisioner
   wutong-paas.github.io/helm-charts:
   kubernetes-sigs.github.io/nfs-ganesha-server-and-external-provisioner:
-  https://vmware-tanzu.github.io/helm-charts:
+  vmware-tanzu.github.io/helm-charts:
     - velero
