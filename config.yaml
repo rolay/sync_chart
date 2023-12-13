@@ -8,3 +8,5 @@ charts:
   kubernetes-sigs.github.io/nfs-ganesha-server-and-external-provisioner:
   vmware-tanzu.github.io/helm-charts:
     - velero
+  charts.bitnami.com/bitnami:
+    - minio
