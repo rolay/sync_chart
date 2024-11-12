@@ -40,8 +40,7 @@ for i, (chart, dependencies) in enumerate(config_data['charts'].items()):
                     "password": f"{chartPassword}"
                 }
             }
-        },
-        "relocateContainerImages": False
+        }
     }
     with open(filename, 'w+') as outfile:
         yaml.dump(data, outfile, default_flow_style=False)
