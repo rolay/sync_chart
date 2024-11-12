@@ -18,7 +18,7 @@ with open('config.yaml', 'r') as stream:
 for i, (chart, dependencies) in enumerate(config_data['charts'].items()):
     filename = f"./chart-{i+1}.yaml"
     data = {
-        "containerPlatforms": [ "linux/amd64", "linux/arm64" ]
+        "containerPlatforms": [ "linux/amd64", "linux/arm64" ],
         "source": {
             "repo": {
                 "kind": "HELM",
@@ -32,7 +32,7 @@ for i, (chart, dependencies) in enumerate(config_data['charts'].items()):
                     "username": f"{registryUsername}",
                     "password": f"{registryPassword}"
                 }
-            }
+            },
             "repo": {
                 "kind": "OCI",
                 "url": f"{chartRepo}",
