@@ -1,4 +1,4 @@
-FROM gcr.io/bitnami-labs/charts-syncer:v0.20.3 as build
+FROM bitnami/charts-syncer:2 as build
 
 FROM python:slim
 
