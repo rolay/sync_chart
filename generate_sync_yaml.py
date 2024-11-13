@@ -14,7 +14,7 @@ with open('config.yaml', 'r') as stream:
         print(exc)
 
 for i, (chart, dependencies) in enumerate(config_data['charts'].items()):
-    filename = f"./{chart}.yaml"
+    filename = f"./chart-{chart}.yaml"
     data = {
         "source": {
             "repo": {
