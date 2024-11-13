@@ -2,8 +2,8 @@ import os
 import yaml
 
 chartRepo = os.environ.get('CHART_REPO')
-chartUsername = os.environ.get('CHART_USER')
-chartPassword = os.environ.get('CHART_PASS')
+chartUsername = os.environ.get('CHART_USERNAME')
+chartPassword = os.environ.get('CHART_PASSWORD')
 containerRegistry = os.environ.get('CONTAINER_REGISTRY')
 containerRepository = os.environ.get('CONTAINER_REPO')
 
