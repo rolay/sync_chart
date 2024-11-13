@@ -6,8 +6,6 @@ chartUsername = os.environ.get('CHART_USER')
 chartPassword = os.environ.get('CHART_PASS')
 containerRegistry = os.environ.get('CONTAINER_REGISTRY')
 containerRepository = os.environ.get('CONTAINER_REPO')
-registryUsername = os.environ.get('REGISTRY_USER')
-registryPassword = os.environ.get('REGISTRY_PASS')
 
 with open('config.yaml', 'r') as stream:
     try:
@@ -26,15 +24,10 @@ for i, (chart, dependencies) in enumerate(config_data['charts'].items()):
             }
         },
         "target": {
-            "containers": {
-                "url": f"{containerRegistry}",
-                "auth": {
-                    "username": f"{registryUsername}",
-                    "password": f"{registryPassword}"
-                }
-            },
+            "containerRegistry": f"{containerRegistry}",
+            "containerRepository": f"{containerRepository}",
             "repo": {
-                "kind": "OCI",
+                "kind": "CHARTMUSEUM",
                 "url": f"{chartRepo}",
                 "auth": {
                     "username": f"{chartUsername}",
