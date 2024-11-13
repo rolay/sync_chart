@@ -14,7 +14,7 @@ with open('config.yaml', 'r') as stream:
         print(exc)
 
 for i, (chart, dependencies) in enumerate(config_data['charts'].items()):
-    filename = f"./chart-{chart}.yaml"
+    filename = f"./chart-{i+1}.yaml"
     data = {
         "source": {
             "repo": {
@@ -33,7 +33,8 @@ for i, (chart, dependencies) in enumerate(config_data['charts'].items()):
                     "password": f"{chartPassword}"
                 }
             }
-        }
+        },
+        "charts": f"{dependencies}"
     }
     with open(filename, 'w+') as outfile:
         yaml.dump(data, outfile, default_flow_style=False)
