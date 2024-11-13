@@ -20,8 +20,10 @@ jobs:
         tags: chart-sync:latest
         build-args: |
           CHART_REPO=${{ secrets.CHART_REPO }}
-          USER=${{ secrets.CHART_USERNAME }}
-          PASS=${{ secrets.CHART_PASSWORD }}
+          CHART_USERNAME=${{ secrets.CHART_USERNAME }}
+          CHART_PASSWORD=${{ secrets.CHART_PASSWORD }}
+          CONTAINER_REGISTRY=${{ secrets.CONTAINER_REGISTRY }}
+          CONTAINER_REPO=${{ secrets.CONTAINER_REPO }}
         push: false
         
     - name: chart sync
